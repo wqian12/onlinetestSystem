@@ -1,0 +1,57 @@
+
+.title {
+	margin: 20px 0;
+	display: inline-block;
+	border-bottom: 2px solid #FB9337;
+	width: 100px;
+}
+.up {
+	padding: 10px;
+	background: #f7f7f7;
+	position: relative;
+}
+.content ul li {
+	font-size: 11px;
+	line-height: 18px;
+	border-bottom: 1px dashed #ddd;
+	padding: 10px;
+}
+.content ul li .user {
+	float: left;
+	margin-right: 10px;
+	padding: 2px;
+}
+.content .more {
+	display: block;
+	text-align: center;
+	background: #eee;
+	color: #069;
+	padding: 5px 0;
+	font-size: 10px;
+	font-weight: bold;
+}
+.userbox {
+	list-style:none;
+	position: relative;
+	left: 100px;
+	width: 350px;
+	height: 600px;
+	float: left;
+}
+#tb1 tr {
+	height: 50px;
+}
+body {
+	background: url('../img/bg13.jpg');
+	width: 100%;
+}
+#nav ul li{
+	color: white;
+}
+#nav ul li a{
+	color: white;
+}
+.navbar {
+	height: 100px;
+	font-size: 24px;
+}

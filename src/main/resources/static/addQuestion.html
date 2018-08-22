@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>addQuestions</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/zui.min.js"></script>
+    <script src="lib/chart/zui.chart.min.js"></script>
+    <script src="js/getUsername.js"></script>
+    <script src="js/addQuestion.js"></script>
+    <link rel="stylesheet" href="css/zui.min.css">
+</head>
+<style type="text/css">
+    #tb {
+        width: 1000px;
+        position: relative;
+    }
+    .menu {
+        display: flex;
+    }
+    #main {
+        display: flex;
+    }
+    #main a {
+        color:white;
+        font-size: 18px;
+    }
+    body {
+        background: url('/img/bg13.jpg');
+    }
+    #nav ul li{
+        color: white;
+    }
+    #nav ul li a{
+        color: white;
+    }
+    .navbar {
+        height: 100px;
+        font-size: 24px;
+    }
+    #f1 thead{
+        font-size: 16px;
+    }
+</style>
+
+<script type="text/javascript">
+
+</script>
+<body>
+<nav class="navbar" id="nav" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" style="font-size:32px;color: white;" href="teacher.html">首页</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-collapse-example">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="updateUser.html">用户管理</a>
+                </li>
+                <li>
+                    <a href="questions.html">试题管理</a>
+                </li>
+                <li>
+                    <a href="papers.html">试卷管理</a>
+                </li>
+                <li>
+                    <a href="scores.html">学生成绩查询</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>教师</li>
+                <li>
+                    <a data-toggle="dropdown" style="font-size:20px">
+                        <span id="currentName"></span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="font-size: 20px;">
+                        <li>
+                            <a href="updPassword.html" style="color: black;">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="/api/logout" style="color: black;">退出</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="main">
+    <nav class="menu" data-ride="menu" style="width: 210px;height:153px;line-height: 30px">
+        <ul class="tree tree-menu" style="width: 150px;">
+            <li>
+                <a href="questions.html">
+                    <i class="icon icon-th"></i>首页
+                </a>
+            </li>
+            <li>
+                <a href="addQuestion.html">
+                    <i class="icon icon-user"></i>新增试题
+                </a>
+            </li>
+            <li>
+                <a href="deleteQuestions.html">
+                    <i class="icon icon-trash"></i>批量删除
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <form id="f1"  style="position: relative;left: 50px;">
+        <table class="table table-borderless" id="tb"  style="width: 900px;">
+            <thead>
+            <tr>
+                <td style="font-size: 22px;color: white;">请选择题目类型</td>
+            </tr>
+            </thead>
+            <tbody>
+            <hr>
+            <tr>
+                <td>
+                    <select class="form-control" id="addType" style="width: 800px;">
+                        <option selected="selected" disabled="disabled"  style='display: none' value=''></option>
+                        <option value="1">单选题</option>
+                        <option value="2">多选题</option>
+                        <option value="3">判断题</option>
+                    </select>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table id="add" class="table table-borderless" style="width: 900px;">
+        <table id="addAnswer">
+
+        </table>
+        </table>
+    </form>
+</div>
+</body>
+
+</html>
